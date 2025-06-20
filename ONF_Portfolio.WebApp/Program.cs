@@ -1,7 +1,11 @@
+using ONF_Portfolio.WebApp.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<DapperService>();
 
 var app = builder.Build();
 
